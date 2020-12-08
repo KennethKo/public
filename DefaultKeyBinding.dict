@@ -1,0 +1,33 @@
+/*
+  minimal bindings for default windows-ish modifier key behavior
+
+  This mapping presumes that you've gone into 
+    System Preferences > Keyboard > Modifier Keys...
+  And remapped Control (^) Key to Command, and Command (⌘) Key to Control.
+
+  To use this mapping, save this file as:
+    ~/Library/KeyBindings/DefaultKeyBinding.dict
+
+  (You may have to create a folder in Library called "KeyBindings")
+
+  Once the file is there, you may need to restart your application (browser, mail client) to have it respect these new keymappings
+*/
+
+{
+    "\UF729"  = moveToBeginningOfLine:; // home
+    "\UF72B"  = moveToEndOfLine:; // end
+    "$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
+    "$\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
+    "^\UF729" = moveToBeginningOfDocument:; // ctrl-home
+    "^\UF72B" = moveToEndOfDocument:; // ctrl-end
+    "^$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // ctrl-shift-home
+    "^$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl-shift-end
+
+    "@\UF702"  = "moveWordBackward:";                    // Cmd  + LeftArrow
+    "@\U007F"  = "deleteWordBackward:";                  // Cmd  + Backspace
+    "@\UF703"  = "moveWordForward:";                     // Cmd  + RightArrow
+    "@\UF728"  = "deleteWordForward:";                   // Cmd  + Delete
+    "@$\UF702" = "moveWordBackwardAndModifySelection:";  // Shift + Cmd  + Leftarrow
+    "@$\UF703" = "moveWordForwardAndModifySelection:";   // Shift + Cmd  + Rightarrow
+
+}
