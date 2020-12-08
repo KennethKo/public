@@ -18,10 +18,10 @@
     "\UF72B"  = moveToEndOfLine:; // end
     "$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
     "$\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
-    "^\UF729" = moveToBeginningOfDocument:; // ctrl-home
-    "^\UF72B" = moveToEndOfDocument:; // ctrl-end
-    "^$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // ctrl-shift-home
-    "^$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl-shift-end
+    "@\UF729" = moveToBeginningOfDocument:; // cmd-home
+    "@\UF72B" = moveToEndOfDocument:; // cmd-end
+    "@$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // cmd-shift-home
+    "@$\UF72B" = moveToEndOfDocumentAndModifySelection:; // cmd-shift-end
 
     "@\UF702"  = "moveWordBackward:";                    // Cmd  + LeftArrow
     "@\U007F"  = "deleteWordBackward:";                  // Cmd  + Backspace
