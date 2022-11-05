@@ -1,0 +1,25 @@
+# Kenneth Ko aliases file
+# Last updated
+# 20221104 1907
+
+SHELL='zsh' # for file names. 'bash' also acceptable
+
+# edit and source this alias file. Also sources it from the rc file
+via() {
+  touch -a ~/.${SHELL}rc
+  grep -qxF "source ~/.${SHELL}_aliases" ~/.${SHELL}rc || echo "\n\nsource ~/.${SHELL}_aliases" >> ~/.${SHELL}rc
+  vi ~/.${SHELL}_aliases && source ~/.${SHELL}_aliases
+}
+
+alias pba='cat ~/.${SHELL}_aliases | pbcopy'
+
+# convenience methods
+alias tt='date "+%Y%m%d %H%M" | tee >/dev/stdout >(tr -d "\n" | pbcopy)'
+alias ll='ls -l'
+
+# clipboard utilities
+pbr() { pbpaste | sed "s/$1/$2/g" | tee >(sed s/$/\\\n/ > /dev/stdout) >(pbcopy) ; }
+pbsq() { pbr \" \' ; }
+pbdq() { pbr \' \" ; }
+
+
