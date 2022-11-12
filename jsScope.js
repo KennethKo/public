@@ -7,3 +7,5 @@
 Object.prototype.let = f => { f(this) }
 Object.prototype.apply = f => { this.let(f); this }
 Object.prototype.inspect = () => { this.apply(console.log) }
+
+export jsScope
