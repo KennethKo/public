@@ -23,3 +23,10 @@ pbsq() { pbr \" \' ; }
 pbdq() { pbr \' \" ; }
 
 
+alias cdc='cd ~/code/GitHub/public'
+# update current dir repo alias file with local file in draft.
+alias gita='if test -f .${SHELL}_aliases ; then git add .${SHELL}_aliases ; cat ~/.${SHELL}_aliases > .${SHELL}_aliases ; fi'
+# no alias for wiping out your local alias file with the repo - too dangerous
+
+
+
