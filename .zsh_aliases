@@ -7,6 +7,7 @@
 #  % source ~/.zsh_aliases
 #  % via
 #  save and exit
+#  (I like this styling for iterm2: https://gist.github.com/kevin-smets/8568070 )
 
 SHELL='zsh' # for file names. 'bash' also acceptable
 
