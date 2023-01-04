@@ -2,6 +2,12 @@
 # Last updated
 # 20221104 1907
 
+# First install:
+#  download .zsh_aliases to ~
+#  % source ~/.zsh_aliases
+#  % via
+#  save and exit
+
 SHELL='zsh' # for file names. 'bash' also acceptable
 
 # edit and source this alias file. Also sources it from the rc file
