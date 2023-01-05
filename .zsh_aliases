@@ -1,6 +1,6 @@
 # Kenneth Ko aliases file
 # Last updated
-# 20221104 1907
+# 20230104 1801
 
 # First install:
 #  download .zsh_aliases to ~
@@ -30,6 +30,7 @@ pbr() { pbpaste | sed "s/$1/$2/g" | tee >(sed s/$/\\\n/ > /dev/stdout) >(pbcopy)
 pbsq() { pbr \" \' ; }
 pbdq() { pbr \' \" ; }
 
+alias h='history 1 | grep'
 
 alias cdc='cd ~/code/GitHub/public'
 # update current dir repo alias file with local file in draft.
