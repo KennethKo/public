@@ -21,6 +21,7 @@ via() {
 alias pba='cat ~/.${SHELL}_aliases | pbcopy'
 
 # convenience methods
+alias td='date "+%Y%m%d" | tee >/dev/stdout >(tr -d "\n" | pbcopy)'
 alias tt='date "+%Y%m%d %H%M" | tee >/dev/stdout >(tr -d "\n" | pbcopy)'
 alias ll='ls -l'
 
