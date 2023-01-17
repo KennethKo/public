@@ -20,6 +20,8 @@ via() {
 
 alias pba='cat ~/.${SHELL}_aliases | pbcopy'
 
+alias pbjson='pbpaste | jq'
+
 # convenience methods
 alias td='date "+%Y%m%d" | tee >/dev/stdout >(tr -d "\n" | pbcopy)'
 alias tt='date "+%Y%m%d %H%M" | tee >/dev/stdout >(tr -d "\n" | pbcopy)'
