@@ -36,6 +36,12 @@ alias h='history 1 | grep'
 
 alias psef='ps -ef | grep'
 
+# github utils
+alias gf='git fetch origin master'
+alias gg='gf && git merge master'
+gs() { git switch -c $1 remotes/origin/$1 }
+
+
 alias cdc='cd ~/code/GitHub/public'
 # update current dir repo alias file with local file in draft.
 alias gita='if test -f .${SHELL}_aliases ; then git add .${SHELL}_aliases ; cat ~/.${SHELL}_aliases > .${SHELL}_aliases ; fi'
