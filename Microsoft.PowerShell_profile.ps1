@@ -58,3 +58,5 @@ function gf { git fetch origin master }
 function gg { gf; git merge master }
 function gs { git switch -c $args remotes/origin/$args }
 
+function gt { gf; git merge $(git describe origin/master --tags --abbrev=0) }
+function gb { gf; git checkout -b $args $(git describe origin/master --tags --abbrev=0) }
