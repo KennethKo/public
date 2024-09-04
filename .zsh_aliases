@@ -1,13 +1,6 @@
 # Kenneth Ko aliases file
 # Last updated
-# 20230104 1801
-
-# First install:
-#  download .zsh_aliases to ~
-#  % source ~/.zsh_aliases
-#  % via
-#  save and exit
-#  (I like this styling for iterm2: https://gist.github.com/kevin-smets/8568070 )
+# 20240904 1137
 
 SHELL='zsh' # for file names. 'bash' also acceptable
 
@@ -20,11 +13,10 @@ via() {
 
 alias pba='cat ~/.${SHELL}_aliases | pbcopy'
 
-alias pbjson='pbpaste | jq'
-
 # convenience methods
 alias td='date "+%Y%m%d" | tee >/dev/stdout >(tr -d "\n" | pbcopy)'
 alias tt='date "+%Y%m%d %H%M" | tee >/dev/stdout >(tr -d "\n" | pbcopy)'
+alias ww="pbpaste | wc -w | tr -d ' ' | pbcopy"
 alias ll='ls -l'
 
 # clipboard utilities
@@ -34,18 +26,23 @@ pbdq() { pbr \' \" ; }
 
 alias h='history 1 | grep'
 
-alias psef='ps -ef | grep'
-
-# github utils
-alias gf='git fetch origin master'
-alias gg='gf && git merge master'
-gs() { git switch -c $1 remotes/origin/$1 }
-
-
-alias cdc='cd ~/code/GitHub/public'
+alias cdc='cd ~/code/GitHub/2022DrataKenScreen'
+alias cds='cd ~/code/2022/scratch'
+alias cdp='cd ~/code/GitHub/public'
 # update current dir repo alias file with local file in draft.
 alias gita='if test -f .${SHELL}_aliases ; then git add .${SHELL}_aliases ; cat ~/.${SHELL}_aliases > .${SHELL}_aliases ; fi'
 # no alias for wiping out your local alias file with the repo - too dangerous
 
+alias sshd='ssh desktop'
+
+#js
+alias n='node'
+
+#py
+alias pv='python3 -m venv venv && . venv/bin/activate'
+
+#postgres
+alias pgstart='brew services start postgresql'
+alias pg='psql postgres'
 
 
