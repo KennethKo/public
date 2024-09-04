@@ -2,6 +2,13 @@
 # Last updated
 # 20240904 1137
 
+# First install:
+#  download .zsh_aliases to ~
+#  % source ~/.zsh_aliases
+#  % via
+#  save and exit
+#  (I like this styling for iterm2: https://gist.github.com/kevin-smets/8568070 )
+
 SHELL='zsh' # for file names. 'bash' also acceptable
 
 # edit and source this alias file. Also sources it from the rc file
@@ -12,6 +19,7 @@ via() {
 }
 
 alias pba='cat ~/.${SHELL}_aliases | pbcopy'
+alias pbjson='pbpaste | jq'
 
 # convenience methods
 alias td='date "+%Y%m%d" | tee >/dev/stdout >(tr -d "\n" | pbcopy)'
@@ -26,7 +34,13 @@ pbdq() { pbr \' \" ; }
 
 alias h='history 1 | grep'
 
-alias cdc='cd ~/code/GitHub/2022DrataKenScreen'
+alias psef='ps -ef | grep'
+
+# github utils
+alias gf='git fetch origin master'
+alias gg='gf && git merge master'
+gs() { git switch -c $1 remotes/origin/$1 }
+
 alias cds='cd ~/code/2022/scratch'
 alias cdp='cd ~/code/GitHub/public'
 # update current dir repo alias file with local file in draft.
