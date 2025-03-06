@@ -5,7 +5,8 @@
 :: Must have lynx installed in your wsl (or install native lynx properly w some kind of native windows sed to trim the header and references)
 
 setlocal EnableDelayedExpansion
-set model=deepseek-r1:1.5b
+set model=%OLLAMA_DEFAULT_MODEL%
+IF NOT DEFINED model SET model=deepseek-r1:1.5b
 
 IF [%1]==[] (
     echo "Running repl on %model%"
