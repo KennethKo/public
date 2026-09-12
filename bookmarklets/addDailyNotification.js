@@ -32,8 +32,8 @@ javascript:(function(){if(window.routineTrackerActive){if(typeof window.triggerR
 
   function r() {
     if (document.title.startsWith('🔴')) {
-      document.title = document.title.replace('🔴', '');
       badgeStamped = false;
+      document.title = document.title.replace('🔴', '');
     }
   }
 
